@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using MyJetWallet.Domain.ExternalMarketApi.Dto;
 using MyJetWallet.Domain.ExternalMarketApi.Models;
-using MyJetWallet.Domain.Orders;
 
 namespace MyJetWallet.Domain.ExternalMarketApi
 {
@@ -23,6 +22,8 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         public Task<GetMarketInfoListResponse> GetMarketInfoListAsync();
 
         [OperationContract]
-        public Task<ExchangeTrade> MarketTrade(string market, OrderSide side, double volume, string referenceId);
+        public Task<ExchangeTrade> MarketTrade(MarketTradeRequest request);
+
+        
     }
 }
