@@ -18,6 +18,6 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         Task<HasSymbolResponse> HasSymbolAsync(MarketRequest request);
 
         [OperationContract]
-        Task<LeOrderBook> GetOrderBookAsync(MarketRequest request);
+        Task<GetOrderBookResponse> GetOrderBookAsync(MarketRequest request);
     }
 }
