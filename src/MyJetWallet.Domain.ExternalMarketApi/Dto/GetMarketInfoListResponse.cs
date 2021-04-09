@@ -5,8 +5,18 @@ using MyJetWallet.Domain.ExternalMarketApi.Models;
 namespace MyJetWallet.Domain.ExternalMarketApi.Dto
 {
     [DataContract]
-    public class GetMarketInfoListResult
+    public class GetMarketInfoListResponse
     {
         [DataMember(Order = 1)] public List<ExchangeMarketInfo> Infos { get; set; }
     }
+
+    [DataContract]
+    public class GetMarketInfoResponse
+    {
+        [DataMember(Order = 1)] public ExchangeMarketInfo Info { get; set; }
+    }
+
+
+
+    
 }

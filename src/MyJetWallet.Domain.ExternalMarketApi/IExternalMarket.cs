@@ -17,10 +17,10 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         public Task<GetBalancesResponse> GetBalancesAsync();
         
         [OperationContract]
-        public Task<ExchangeMarketInfo> GetMarketInfoAsync(MarketRequest request);
+        public Task<GetMarketInfoResponse> GetMarketInfoAsync(MarketRequest request);
         
         [OperationContract]
-        public Task<GetMarketInfoListResult> GetMarketInfoListAsync();
+        public Task<GetMarketInfoListResponse> GetMarketInfoListAsync();
 
         [OperationContract]
         public Task<ExchangeTrade> MarketTrade(string market, OrderSide side, double volume, string referenceId);
