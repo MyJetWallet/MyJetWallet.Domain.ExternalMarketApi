@@ -9,14 +9,4 @@ namespace MyJetWallet.Domain.ExternalMarketApi.Dto
     {
         [DataMember(Order = 1)] public List<ExchangeMarketInfo> Infos { get; set; }
     }
-
-    [DataContract]
-    public class GetMarketInfoResponse
-    {
-        [DataMember(Order = 1)] public ExchangeMarketInfo Info { get; set; }
-    }
-
-
-
-    
 }

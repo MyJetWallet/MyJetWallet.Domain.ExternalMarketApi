@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using MyJetWallet.Domain.ExternalMarketApi.Models;
 
-namespace MyJetWallet.Domain.ExternalMarketApi
+namespace MyJetWallet.Domain.ExternalMarketApi.Dto
 {
     [DataContract]
     public class GetOrderBookResponse
