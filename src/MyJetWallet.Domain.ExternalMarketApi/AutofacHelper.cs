@@ -16,6 +16,7 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         {
             var factory = new ExternalMarketClientFactory(externalMarketGrpcServiceUrl);
 
+            builder.RegisterInstance(factory.GetExternalMarketGrpc()).As<IExternalExchangeManager>().SingleInstance();
             builder.RegisterInstance(factory.GetExternalMarketGrpc()).As<IExternalMarket>().SingleInstance();
             builder.RegisterInstance(factory.GetOrderBookSourceGrpc()).As<IOrderBookSource>().SingleInstance();
         }
@@ -33,6 +34,8 @@ namespace MyJetWallet.Domain.ExternalMarketApi
             _channel = channel.Intercept(new PrometheusMetricsInterceptor());
         }
 
+        public IExternalExchangeManager GetIExternalExchangeManagerGrpc() =>
+            _channel.CreateGrpcService<IExternalExchangeManager>();
         public IExternalMarket GetExternalMarketGrpc() => _channel.CreateGrpcService<IExternalMarket>();
         public IOrderBookSource GetOrderBookSourceGrpc() => _channel.CreateGrpcService<IOrderBookSource>();
     }
