@@ -11,5 +11,6 @@ namespace MyJetWallet.Domain.ExternalMarketApi.Dto
         [DataMember(Order = 3)] public double Volume { get; set; }
         [DataMember(Order = 4)] public string ReferenceId { get; set; }
         [DataMember(Order = 5)] public double OppositeVolume { get; set; }
+        [DataMember(Order = 6)] public string ExchangeName { get; set; }
     }
 }

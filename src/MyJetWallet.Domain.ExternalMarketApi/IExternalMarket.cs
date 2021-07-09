@@ -9,21 +9,18 @@ namespace MyJetWallet.Domain.ExternalMarketApi
     public interface IExternalMarket
     {
         [OperationContract]
-        public Task<GetNameResult> GetNameAsync();
-        
-        
+        public Task<GetNameResult> GetNameAsync(GetNameRequest request);
+
         [OperationContract]
-        public Task<GetBalancesResponse> GetBalancesAsync();
+        public Task<GetBalancesResponse> GetBalancesAsync(GetBalancesRequest request);
         
         [OperationContract]
         public Task<GetMarketInfoResponse> GetMarketInfoAsync(MarketRequest request);
         
         [OperationContract]
-        public Task<GetMarketInfoListResponse> GetMarketInfoListAsync();
+        public Task<GetMarketInfoListResponse> GetMarketInfoListAsync(GetMarketInfoListRequest request);
 
         [OperationContract]
         public Task<ExchangeTrade> MarketTrade(MarketTradeRequest request);
-
-        
     }
 }
