@@ -16,7 +16,7 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         {
             var factory = new ExternalMarketClientFactory(externalMarketGrpcServiceUrl);
 
-            builder.RegisterInstance(factory.GetExternalMarketGrpc()).As<IExternalExchangeManager>().SingleInstance();
+            builder.RegisterInstance(factory.GetIExternalExchangeManagerGrpc()).As<IExternalExchangeManager>().SingleInstance();
             builder.RegisterInstance(factory.GetExternalMarketGrpc()).As<IExternalMarket>().SingleInstance();
             builder.RegisterInstance(factory.GetOrderBookSourceGrpc()).As<IOrderBookSource>().SingleInstance();
         }
