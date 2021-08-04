@@ -1,7 +1,6 @@
 ﻿using System.ServiceModel;
 using System.Threading.Tasks;
 using MyJetWallet.Domain.ExternalMarketApi.Dto;
-using MyJetWallet.Domain.ExternalMarketApi.Models;
 
 namespace MyJetWallet.Domain.ExternalMarketApi
 {
@@ -9,10 +8,10 @@ namespace MyJetWallet.Domain.ExternalMarketApi
     public interface IOrderBookSource
     {
         [OperationContract]
-        Task<GetNameResult> GetNameAsync();
+        Task<GetNameResult> GetNameAsync(GetOrderBookNameRequest request);
 
         [OperationContract]
-        Task<GetSymbolResponse> GetSymbolsAsync();
+        Task<GetSymbolResponse> GetSymbolsAsync(GetSymbolsRequest request);
 
         [OperationContract]
         Task<HasSymbolResponse> HasSymbolAsync(MarketRequest request);

@@ -1,9 +1,9 @@
 using System.Runtime.Serialization;
 
-namespace MyJetWallet.Domain.ExternalMarketApi.Models
+namespace MyJetWallet.Domain.ExternalMarketApi.Dto
 {
     [DataContract]
-    public class GetNameRequest
+    public class GetSymbolsRequest
     {
         [DataMember(Order = 1)] public string ExchangeName { get; set; }
     }
