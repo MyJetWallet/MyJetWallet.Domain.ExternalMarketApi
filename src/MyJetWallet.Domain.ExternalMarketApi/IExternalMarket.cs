@@ -25,5 +25,8 @@ namespace MyJetWallet.Domain.ExternalMarketApi
         
         [OperationContract]
         public Task<GetTradesResponse> GetTradesAsync(GetTradesRequest request);
+        
+        [OperationContract]
+        public Task<ExchangeTrade> MakeLimitTradeAsync(MakeLimitTradeRequest request);
     }
 }
