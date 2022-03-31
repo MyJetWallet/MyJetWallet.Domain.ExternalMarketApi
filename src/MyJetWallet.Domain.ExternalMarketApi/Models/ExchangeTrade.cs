@@ -26,5 +26,7 @@ namespace MyJetWallet.Domain.ExternalMarketApi.Models
 
         [DataMember(Order = 14)] public string FeeSymbol { get; set; }
         [DataMember(Order = 15)] public double FeeVolume { get; set; }
+        [DataMember(Order = 16)] public string BaseAsset { get; set; }
+        [DataMember(Order = 17)] public string QuoteAsset { get; set; }
     }
 }
