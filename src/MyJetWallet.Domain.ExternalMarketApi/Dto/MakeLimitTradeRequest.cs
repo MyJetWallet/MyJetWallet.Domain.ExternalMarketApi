@@ -12,6 +12,6 @@ public class MakeLimitTradeRequest
     [DataMember(Order = 3)] public decimal Volume { get; set; }
     [DataMember(Order = 4)] public string ReferenceId { get; set; }
     [DataMember(Order = 5)] public TimeSpan TimeLimit { get; set; }
-    [DataMember(Order = 5)] public decimal PriceLimit { get; set; }
-    [DataMember(Order = 6)] public string ExchangeName { get; set; }
+    [DataMember(Order = 6)] public decimal PriceLimit { get; set; }
+    [DataMember(Order = 7)] public string ExchangeName { get; set; }
 }
