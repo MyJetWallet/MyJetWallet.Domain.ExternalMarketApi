@@ -12,5 +12,5 @@ public class Withdrawal
     [DataMember(Order = 4)] public decimal Fee { get; set; }
     [DataMember(Order = 5)] public decimal Amount { get; set; }
     [DataMember(Order = 6)] public string Note { get; set; }
-    //[DataMember(Order = 6)] public OperationStatus Status { get; set; }
+    [DataMember(Order = 7)] public DateTime Date { get; set; }
 }
